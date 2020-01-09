@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="5"
+
+    tools:context="com.example.hcuconnect.Dashboard">
+
+    <LinearLayout
+        android:weightSum="2"
+        android:background="@drawable/butt_stylebutton"
+        android:id="@+id/l"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+
+            android:background="@drawable/butt_style"
+            android:id="@+id/id_logout"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:text="Logout" />
+
+        <Button
+            android:background="@drawable/butt_style"
+
+            android:id="@+id/id_changePassword"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:text="Change Passwrd" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:background="@drawable/backg"
+            android:id="@+id/listviewdashboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/l"
+            app:stackFromEnd="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/butt_stylebutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <EditText
+            android:background="@drawable/backg"
+
+            android:id="@+id/id_insertmessage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:hint="Type your Message"
+            android:textAlignment="center" />
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:id="@+id/id_send"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/send" />
+    </LinearLayout>
+
+</LinearLayout>
